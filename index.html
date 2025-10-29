@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techstore 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🛒 TechStore 2025</div>
+            <div class="menu-hamburguesa" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li class="carrito-icon" onclick="toggleCarrito()">
+                    🛒 <span class="carrito-count" id="carritoCount">0</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- banner con foto de michi-->
+<section id="inicio" class="hero-completo" style="
+    position: relative;
+    height: 600px; /* altura del hero */
+    background-image: url('https://citymagazine.b-cdn.net/wp-content/uploads/2017/04/cat-sleeps-on-laptop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+">
+    <!-- Overlay oscuro -->
+    <div style="
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.4);
+        z-index: 0;
+    "></div>
+
+    <!-- Texto que aparece encima de la imagen -->
+    <h1 style="position: relative; z-index: 1; font-size: 3rem;">Bienvenidos a TechStore 2025</h1>
+    <p style="position: relative; z-index: 1; font-size: 1.5rem;">Los mejores productos tecnológicos al mejor precio</p>
+</section>
+
+    <!-- Carrusel de Productos Destacados -->
+    <section class="carrusel-section">
+        <h2>Productos Destacados</h2>
+        <div class="carrusel-container">
+            <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">❮</button>
+            <div class="carrusel-wrapper">
+                <div class="carrusel" id="carrusel">
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/69857/69856064/images/res_f7fd128ffd6678b9551c2176b433c9f2.jpg?width=720&height=720&hash=65D2ED59762473808F17A205C1646EBF" alt="Producto 1">
+                        <h4>Auriculares Pro</h4>
+                        <p class="precio-mini">$89.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/68102/68101447/images/res_32fbabaeb33589b73a8edfff70526adc.png?width=720&height=720&hash=9B1911E374BDBA2CD2951659A1BA9A47" alt="Producto 2">
+                        <h4>Smart Watch</h4>
+                        <p class="precio-mini">$199.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/7979/7978385/images/res_0edf4dc002bcd4f4696021da9f511eac.jpg?width=720&height=720&hash=0837A443F12EF8E7E0C1BA29D0216F34" alt="Producto 3">
+                        <h4>Webcam HD</h4>
+                        <p class="precio-mini">$129.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/59324/59323115/images/res_d28f2f4ed8439fb385fc5dbbddf70403.jpg?width=720&height=720&hash=0FE9EF238C24670A460F83212D29510E" alt="Producto 4">
+                        <h4>Power Bank</h4>
+                        <p class="precio-mini">$49.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/32623/32622535/images/res_3a33c1dba77ea23081439b38fb882f65.jpg?width=720&height=720&hash=A764A9FCE9629FEB964170ABDF245546" alt="Producto 5">
+                        <h4>USB-C Hub</h4>
+                        <p class="precio-mini">$79.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://walmartcr.vtexassets.com/arquivos/ids/380406-800-600?v=638103010359230000&width=800&height=600&aspect=true" alt="Producto 6">
+                        <h4>Micrófono Pro</h4>
+                        <p class="precio-mini">$159.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/56645/56644165/images/res_b1e2bbdd67fb5e98d9af6ebdcd350464.jpg?width=720&height=720&hash=797FC424CF8AA5CFB563C3816D753625" alt="Producto 7">
+                        <h4>Lámpara LED</h4>
+                        <p class="precio-mini">$39.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/57404/57403140/images/res_102a41b2789575c46e6e8a34f3787fde.jpg?width=720&height=720&hash=391D9F1CFD41ECBBF96DCBA34563A9E8" alt="Producto 8">
+                        <h4>Cable Premium</h4>
+                        <p class="precio-mini">$29.99</p>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="https://s13emagst.akamaized.net/products/94539/94538514/images/res_c90f07ba75274e293932b7d8da3f7de3.png" alt="Producto 8">
+                        <h4>PS5</h4>
+                        <p class="precio-mini">$799.999.99</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carrusel-btn next" onclick="moverCarrusel(1)">❯</button>
+        </div>
+    </section>
+    <!-- Productos -->
+    <section id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid">
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=1" alt="Auriculares">
+                <div class="card-content">
+                    <h3>Auriculares Premium</h3>
+                    <p>Sonido de alta calidad con cancelación de ruido</p>
+                    <p class="precio">$89.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Auriculares Premium', 89.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=2" alt="Reloj Smart">
+                <div class="card-content">
+                    <h3>Reloj Inteligente</h3>
+                    <p>Monitorea tu salud y actividad diaria</p>
+                    <p class="precio">$199.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Reloj Inteligente', 199.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=3" alt="Cámara">
+                <div class="card-content">
+                    <h3>Cámara Profesional</h3>
+                    <p>Captura momentos con calidad 4K</p>
+                    <p class="precio">$599.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Cámara Profesional', 599.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=4" alt="Laptop">
+                <div class="card-content">
+                    <h3>Laptop Ultra</h3>
+                    <p>Potencia y portabilidad en uno</p>
+                    <p class="precio">$1,299.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Laptop Ultra', 1299.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=5" alt="Teclado">
+                <div class="card-content">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>Experiencia gaming de alto nivel</p>
+                    <p class="precio">$129.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Teclado Mecánico RGB', 129.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=6" alt="Mouse">
+                <div class="card-content">
+                    <h3>Mouse Gaming Pro</h3>
+                    <p>Precisión máxima para profesionales</p>
+                    <p class="precio">$79.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Mouse Gaming Pro', 79.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=7" alt="Monitor">
+                <div class="card-content">
+                    <h3>Monitor 4K Ultra HD</h3>
+                    <p>Colores vibrantes y nitidez increíble</p>
+                    <p class="precio">$399.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Monitor 4K Ultra HD', 399.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/400/300?random=8" alt="Tablet">
+                <div class="card-content">
+                    <h3>Tablet Pro 2025</h3>
+                    <p>Productividad en tus manos</p>
+                    <p class="precio">$799.99</p>
+                    <button class="btn" onclick="agregarAlCarrito('Tablet Pro 2025', 799.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros">
+        <h2 style="color: white;">Sobre Nosotros</h2>
+        <p>
+            TechStore 2025 es tu tienda de confianza para productos tecnológicos de última generación. 
+            Desde 2020, nos dedicamos a ofrecer los mejores dispositivos con precios competitivos y 
+            un servicio al cliente excepcional. Nuestra misión es hacer la tecnología accesible para todos, 
+            manteniendo siempre los más altos estándares de calidad. Contamos con un equipo apasionado 
+            por la innovación y comprometido con tu satisfacción.
+        </p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <div class="contacto-info">
+            <div class="contacto-item">
+                <h3>📍 Dirección</h3>
+                <p>Av. Tecnología 123<br>Buenos Aires, Argentina</p>
+            </div>
+            <div class="contacto-item">
+                <h3>📞 Teléfono</h3>
+                <p>+54 11 1234-5678<br>Lun - Vie: 9:00 - 18:00</p>
+            </div>
+            <div class="contacto-item">
+                <h3>✉️ Email</h3>
+                <p>info@techstore2025.com<br>soporte@techstore2025.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Carrito -->
+    <div class="carrito-modal" id="carritoModal">
+        <div class="carrito-content">
+            <div class="carrito-header">
+                <h2>🛒 Mi Carrito</h2>
+                <span class="cerrar-carrito" onclick="toggleCarrito()">✖</span>
+            </div>
+            <div id="carritoItems"></div>
+            <div class="carrito-total" id="carritoTotal">Total: $0.00</div>
+            <button class="btn" style="margin-top: 1rem;" onclick="finalizarCompra()">Finalizar Compra</button>
+            <button class="btn" style="margin-top: 0.5rem; background: #ff4444;" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 TechStore - Desarrollo Web 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
