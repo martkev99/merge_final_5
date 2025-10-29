@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techstore 2025</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     <!-- Header -->
@@ -226,6 +228,14 @@
                 <h3>✉️ Email</h3>
                 <p>info@techstore2025.com<br>soporte@techstore2025.com</p>
             </div>
+            <div class="formulario-container">
+        <h3>Envíanos un Mensaje</h3>
+        <form class="contacto-form" action="#" method="POST">
+            <input type="text" name="nombre" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+            <textarea name="mensaje" placeholder="Tu Mensaje" rows="5" required></textarea>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
         </div>
     </section>
 
@@ -241,6 +251,7 @@
             <button class="btn" style="margin-top: 1rem;" onclick="finalizarCompra()">Finalizar Compra</button>
             <button class="btn" style="margin-top: 0.5rem; background: #ff4444;" onclick="vaciarCarrito()">Vaciar Carrito</button>
         </div>
+        
     </div>
 
     <!-- Footer -->
@@ -249,5 +260,12 @@
     </footer>
 
     <script src="script.js"></script>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5491159125690?text=Hola%20quiero%20más%20información" 
+   class="whatsapp-float" 
+   target="_blank">
+  <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+</a>
+
 </body>
 </html>
